@@ -171,5 +171,95 @@ The most commonly used attribute selectors are listed below:
 [attribute] Selector - applies the style rule for all the element which has a specified attribute.
 [attribute="value"] Selector - uses the = operator to select the element whose attribute value is exactly equal to the given value.
 [attribute~="value"] Selector - uses the ~= operator to select elements that have the specified attribute with a value containing a given word, delimited by spaces.
+[attribute|="value"] Selector - uses the |= operator to select elements that have the specified attribute with a value either equal to a given string or starting with that string followed by a hyphen (-).
+[attribute^="value"] Selector - uses the ^= operator to select elements that have the specified attribute with a value beginning exactly with a given string.
+[attribute$="value"] Selector uses the $= operator to select elements that have the specified attribute with a value ending exactly with a given string. The comparison is case sensitive.
+[attribute*="value"] Selector - uses the *= operator to select elements that have the specified attribute with a value containing a given substring.
+![image](https://user-images.githubusercontent.com/12488769/148695870-52457b19-cc57-4e11-b714-3134e17b38d9.png)
 
 ```
+![image](https://user-images.githubusercontent.com/12488769/148695879-beb2c3c4-e311-4d5d-8204-886cd6a06a3a.png)
+![image](https://user-images.githubusercontent.com/12488769/148695885-6f349480-3e8a-4917-85c6-f1869307a737.png)
+
+## Grouping Selector
+The CSS grouping selector is used to apply a common style for the number of elements on the page. 
+You can group the selector using comma (,) separator. 
+It allows you to specify the same properties and rules for more than one element at the same time. 
+This reduces the code and extra effort to declare common styles for each element.
+![image](https://user-images.githubusercontent.com/12488769/148695911-a4979871-df9f-45b7-87ad-6885606e89de.png)
+![image](https://user-images.githubusercontent.com/12488769/148695921-a9223217-50a0-4dd4-86c2-d27ef241b3ed.png)
+
+## Child Selectors
+Child Selector selects all the elements that are the children of a specified element. 
+The Syntax of Child Selector is element > element { property: value;} which selects those elements which are the children of specific parent. 
+The left side of > is a parent element and on the right is the children element.
+
+![image](https://user-images.githubusercontent.com/12488769/148695940-3afdba49-7537-4080-9dcf-781717ac450c.png)
+![image](https://user-images.githubusercontent.com/12488769/148695946-fdaea086-1acd-4995-b5e1-51cd86af8df3.png)
+
+## Descebdebt selectors
+The descendant selector selects all the elements which are a child of the element. 
+It allows you to limit the targeted elements to the ones who are descendants of another element. 
+The syntax is element element { property: value; } you simply write the parent(s), separate with space, and then the actual element you want to target.
+
+![image](https://user-images.githubusercontent.com/12488769/148695992-bc96c7fb-a48e-4b73-ab21-aa15ae9eeaf7.png)
+![image](https://user-images.githubusercontent.com/12488769/148695998-fa85f7f0-2ed4-4d8c-b375-ed1860f2aeb6.png)
+
+## General sibling selector
+The General Sibling selector selects all the elements which are siblings of a specified element. 
+The syntax is element ~ element { property: value; }, which selects all the sibling elements that are in same hierarchy level
+
+![image](https://user-images.githubusercontent.com/12488769/148696028-5ef4f30c-f3f0-4863-bfa7-8c37cfb7f06f.png)
+![image](https://user-images.githubusercontent.com/12488769/148696036-e77c6d7b-3c8f-4abd-b9b9-c5850a43ec43.png)
+
+## Adjacent Sibling Selector
+The Adjacent Sibling selector selects the element that are the adjacent sibling of a specified element. 
+The syntax is element + element { property: value; }, which selects the second one, if it immediately follows the first one in order of appearance in an HTML page.
+![image](https://user-images.githubusercontent.com/12488769/148696078-dadf0c23-79be-45d2-baa6-e1e6a42360f1.png)
+![image](https://user-images.githubusercontent.com/12488769/148696084-1bd7334c-d44b-46a3-968e-d105bd4c462f.png)
+
+## Pseudo Class Selector
+```
+Pseudo Class Selector is used to specify the state of an element. 
+It let us to apply a style to an element which are related with external factors like the history of the navigator ( like :visited), the status of its content (like :checked on certain form elements), or the position of the mouse (like :hover, which lets you know if the mouse is over an element or not).
+The syntax for Pseudo Class Selector is selector:pseudo-class { property: value; } . 
+These pseudo- classes are used with the selector to style the element on a specific state.
+:link - Used to select only <a> element with href attributes and applies the style for unvisted link. 
+:visited - Used to select only <a> element with href attributes and applies the style for visited link. 
+:active - selects an element which is activated by user clicks 
+:hover - selects the style when the element is in its hover state (mouse cursor rolls over the element). 
+:focus - selects the form input element that has received focus. It is generally triggered when the user clicks or taps on an element or selects it with the keyboard's "tab" key. 
+:lang - Used to specify a language to use in a element. 
+:first-child - selects the first element among a group of sibling elements
+  ```
+  ![image](https://user-images.githubusercontent.com/12488769/148696117-989eb501-1478-4841-a4c4-d2c8dc4c8cd8.png)
+
+  ## Pseudo element  selector
+  Pseudo-elements allows to style the specified parts of an element that is not available under DOM tree. 
+It let us to apply to style the first letter or first line of an element's content, change the font of the first line of a paragraph, etc.
+The syntax for Pseudo Element Selector is selector::pseudo-element { property:value; }. 
+
+::first-letter - Selects the first letter of the text contents inside an element. 
+::first-line - Selects the first line of the text contents inside an element. 
+::before - Used to insert generated content immediately before an element. 
+::after - Used to insert generated content either before or after an element on the page generate content immediately after an element.
+
+
+![image](https://user-images.githubusercontent.com/12488769/148696175-dd89c65d-1364-4c61-8609-b80ad47fdefb.png)
+![image](https://user-images.githubusercontent.com/12488769/148696180-d4364bfb-11d4-4f4d-a3e9-a0738dd33c48.png)
+
+## Specificity in CSS
+When we have more than one CSS style rule for an element, the browser selects one style rule for that element based upon a specificity as a score/rank/priority. 
+Specificity only applies when the same element is targeted by multiple CSS declarations. 
+Specificity is the set of the rules applied to CSS selectors to determine which style is applied to an element. More specific selector will have higher Precedence.
+The specificity level of a selector has 4 categories listed below:
+Inline CSS - Example: <h1 style="color: #ffffff;"> 
+ID Selector
+Class Attribute and Pseudo-Classes Selectors.
+Element and Pseudo-Elements Selector.
+Inline CSS have higher priority and Element and Pseudo-Elements Selector have lowest priority. 
+
+
+
+
+
