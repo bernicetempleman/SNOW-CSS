@@ -117,6 +117,59 @@ The color properties are set using 5 different color notation types
 ![image](https://user-images.githubusercontent.com/12488769/148695290-13fcd6b2-11d6-4f65-b4b6-acb48d993282.png)
 
 
+# CSS Selectors
+- CSS selectors are used for selecting the content/text you want to style in our site. 
+- Selectors are the part of CSS ruleset. 
+- CSS selectors select the HTML elements according to its id, class, type, attribute, etc. 
+
+## There are several different types of selectors in CSS, some of them are listed below
+- Element Selector 
+- Id Selector 
+- Class Selector 
+- Universal Selector 
+- Attribute selectors 
+- Grouping Selector 
+- Child and descendent selectors 
+- General and adjacent sibling selectors 
+= Pseudo-element and pseudo-class selectors
+
+## Element selector
+The element selector selects HTML elements by their name / tag name like a, h1, div, p etc
+![image](https://user-images.githubusercontent.com/12488769/148695626-759fa3da-c2ca-4af0-b0e9-5401c2fa6d5d.png)
+
+## ID Selector
+- In the CSS, the ID selector is a name preceded by a hash character (“#”). 
+- It uses the id attribute of an HTML element to match the specific HTML element. 
+- The id of an element should be unique within a page, so the id selector is used to select one unique element.
 
 
+![image](https://user-images.githubusercontent.com/12488769/148695654-2d09bf9b-db20-4976-8b58-d0dc6d7c83a8.png)
+![image](https://user-images.githubusercontent.com/12488769/148695656-c8caaabc-d48f-4823-88e2-6b7afcfa6f39.png)
 
+## Class Selector
+- In the CSS, the class selector is a name preceded by a period (“.”). 
+- It uses the class attribute of an HTML element to match the specific HTML element. 
+- We can have a Class selector specific to an HTML element like we have p.class in the below example.
+
+![image](https://user-images.githubusercontent.com/12488769/148695688-d9a633f9-4033-425a-86bc-e658811f2b2c.png)
+
+![image](https://user-images.githubusercontent.com/12488769/148695695-a75ac0b3-f024-471a-b2d9-fdc43932582a.png)
+
+## Universal Selector
+- The universal selector denoted by an asterisk (*), matches all the elements on the page. 
+If any other specific selector exists on the element, then the universal selector will be omitted.
+
+![image](https://user-images.githubusercontent.com/12488769/148695739-84a785f6-a093-424a-8cc3-c9aef13d27cf.png)
+
+![image](https://user-images.githubusercontent.com/12488769/148695744-448a460d-07ca-47e2-bc9a-2196c12fac3b.png)
+
+## Attribute Selector
+```
+An attribute selector selects the HTML elements that has a specific attribute or attribute with a specified value. 
+You can create an attribute selector by having the attribute in a pair of square brackets [attribute]. 
+The most commonly used attribute selectors are listed below:
+[attribute] Selector - applies the style rule for all the element which has a specified attribute.
+[attribute="value"] Selector - uses the = operator to select the element whose attribute value is exactly equal to the given value.
+[attribute~="value"] Selector - uses the ~= operator to select elements that have the specified attribute with a value containing a given word, delimited by spaces.
+
+```
